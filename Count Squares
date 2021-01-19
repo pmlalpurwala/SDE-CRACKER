@@ -1,0 +1,8 @@
+class Solution {
+  public:
+    int countSquares(int N) {
+        int n = sqrt(N);
+        if((n*n)==N)return n-1;
+        else return n;
+    }
+};
