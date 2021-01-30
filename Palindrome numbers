@@ -1,0 +1,28 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if(x<0)return false;
+        if(x==0)return true;
+        long ans=0;
+        long mod;
+        int prev=x;
+        while(x!=0)
+        {
+            mod=x%10;
+            ans=ans*10 + mod;
+            x=x/10;
+        }
+        
+        if(ans==prev)
+        {
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+};
+
+Runtime: 4 ms
+Memory Usage: 6 MB
