@@ -1,0 +1,33 @@
+class Solution
+{
+public:
+    vector<int> sieveOfEratosthenes(int n)
+    {
+        // Write Your Code here
+        
+        bool prime[n+1];
+        memset(prime,true,sizeof(prime));
+        
+        for(int i=2;i*i<=n;i++)
+        {
+            if(prime[i]==true)
+            {
+                for(int j=i*2 ; j<=n;j=j+i)
+                {
+                    prime[j]=false;
+                }
+            }
+        }
+        
+        vector <int> ans;
+        for(int i=2;i<=n;i++)
+        {
+            if(prime[i])
+            {
+                ans.push_back(i);
+            }
+        }
+        
+        return ans;
+    }
+};
