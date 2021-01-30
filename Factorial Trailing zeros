@@ -1,0 +1,15 @@
+class Solution {
+public:
+    int trailingZeroes(int n) {
+        
+        int res = 0;
+        for(int i=5; i<=n;i*=5)
+        {
+            res = res + n/i;
+        }
+         return res;
+    }
+};
+
+Runtime: 0 ms
+Memory Usage: 5.9 MB
