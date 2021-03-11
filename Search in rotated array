@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int search(vector<int>& v, int target) {
+        
+       auto it = find(v.begin(),v.end(),target);
+        if(it!=v.end())
+        {
+            int ans = distance(v.begin(),it);
+            return ans;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+};
